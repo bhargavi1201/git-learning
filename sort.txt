@@ -1,8 +1,2 @@
-bhargavi
-vikram
-apple
- mango 
- orange
-pineapple
-pizza
-papaya
+hi 
+how are you?
