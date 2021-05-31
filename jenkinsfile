@@ -1,35 +1,22 @@
 pipeline {
          agent any
          stages {
-                 stage('One') {
+                 stage('build') {
                  steps {
-                     echo 'Hi, this is Zulaikha from edureka'
+                     echo 'building the application'
+                     }
+                 
                  }
-                 }
-                 stage('Two') {
+                 stage('test') {
                  steps {
-                    input('Do you want to proceed?')
-                 }
-                 }
-                 stage('Three') {
-                 when {
-                       not {
-                            branch "master"
-                       }
-                 }
+                     echo 'testing the application'                 
+                     }
+                 }    
+                 stage('deploy') {
                  steps {
-                       echo "Hello"
-                 }
-                 }
-                 stage('Four') {
-                 parallel { 
-                            stage('Unit Test') {
-                           steps {
-                                echo "Running the unit test..."
-                           }
-                           }
-                            
-                           
-                           }
-              }
-}
+                     echo 'deploying the application'                 
+                     }
+                 }    
+                 
+            }     
+        }    
